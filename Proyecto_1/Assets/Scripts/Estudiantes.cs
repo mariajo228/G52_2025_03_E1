@@ -1,28 +1,25 @@
-using UnityEngine;
-using System;
+﻿using System;
 
 namespace packagePersona
 {
-    public class Estudiantes : Persona
+    [Serializable]
+    public class Estudiantes
     {
-        private string codeE;
-        private string nameCarreraE;
-
-        public Estudiantes()
-        {
-        }
+        public string CodeE;
+        public string NameCarreraE;
+        public string NameP;
+        public string MailP;
+        public string DirP;
 
         public Estudiantes(string codeE, string nameCarreraE, string nameP, string mailP, string dirP)
-            : base (nameP, mailP, dirP)
-
         {
-            this.codeE = codeE;
-            this.nameCarreraE = nameCarreraE;
+            CodeE = codeE;
+            NameCarreraE = nameCarreraE;
+            NameP = nameP;
+            MailP = mailP;
+            DirP = dirP;
         }
-
-        public string CodeE { get => codeE; set => codeE = value; }
-        public string NameCarreraE { get => nameCarreraE; set => nameCarreraE = value; }
     }
-
 }
+
 
